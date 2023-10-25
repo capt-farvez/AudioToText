@@ -23,6 +23,7 @@ def transcribe_audio(request):
             return JsonResponse({'error': "Unable to transcribe audio file."})
         else:
             for word in words:
+                
                 print(
                     "{word=\"%s\" start_sec=%.2f end_sec=%.2f confidence=%.2f}"
                     % (word.word, word.start_sec, word.end_sec, word.confidence))
